@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carteirinha</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#ececec;
+
+    display:flex;
+    justify-content:center;
+
+    min-height:100vh;
+}
+
+.card{
+
+    width:100%;
+    max-width:430px;
+    min-height:100vh;
+
+    background:#eef0ff;
+
+    position:relative;
+    overflow:hidden;
+
+    padding:28px 22px 40px;
+}
+
+/* FUNDO */
+
+.bg1{
+    position:absolute;
+    width:700px;
+    height:700px;
+
+    border:55px solid #d94d9f;
+
+    border-radius:50%;
+
+    bottom:-420px;
+    left:-180px;
+
+    opacity:.9;
+}
+
+.bg2{
+    position:absolute;
+    width:800px;
+    height:800px;
+
+    border:45px solid #c45ae8;
+
+    border-radius:50%;
+
+    top:180px;
+    right:-520px;
+
+    opacity:.35;
+}
+
+/* TOPO */
+
+.header{
+    position:relative;
+    z-index:2;
+}
+
+.title{
+    text-align:center;
+    font-size:15px;
+    font-weight:800;
+
+    margin-bottom:28px;
+}
+
+.logos{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    width:100%;
+
+    margin-bottom:10px;
+}
+
+.logo-img{
+    object-fit:contain;
+    display:block;
+}
+
+.left-logo{
+    height:58px;
+}
+
+.right-logo{
+    height:70px;
+}
+
+/* FOTO + QR */
+
+.top-section{
+    display:flex;
+    gap:18px;
+
+    position:relative;
+    z-index:2;
+
+    align-items:stretch;
+}
+
+.qr-box{
+
+    background:white;
+    border-radius:18px;
+
+    padding:14px;
+}
+
+.photo-box{
+    width:50%;
+    overflow:hidden;
+    border-radius:18px;
+}
+
+.photo{
+    width:100%;
+    aspect-ratio:3/4;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.qr-box{
+    width:50%;
+
+    background:white;
+    border-radius:18px;
+
+    padding:14px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+
+    min-height:100%;
+}
+
+.qr-image{
+    width:100%;
+
+    max-height:220px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin-bottom:12px;
+}
+
+.qr-text{
+    text-align:center;
+
+    font-size:13px;
+    line-height:1.3;
+
+    flex-shrink:0;
+}
+
+/* INFORMAÇÕES */
+
+.info-card{
+
+    position:relative;
+    z-index:2;
+
+    margin-top:22px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:22px;
+}
+
+.name{
+    font-size:22px;
+    font-weight:800;
+
+    margin-bottom:20px;
+}
+
+.info{
+    margin-bottom:10px;
+    line-height:1.5;
+}
+
+.info strong{
+    font-weight:800;
+}
+
+.year{
+    text-align:right;
+    font-size:44px;
+    font-weight:800;
+
+    color:#3b66ff;
+
+    margin-top:22px;
+}
+
+/* RODAPÉ */
+
+.footer{
+
+    position:relative;
+    z-index:2;
+
+    margin-top:24px;
+
+    text-align:center;
+}
+
+.footer-title{
+    font-size:14px;
+    font-weight:700;
+
+    margin-bottom:6px;
+}
+
+.footer-sub{
+    font-size:13px;
+    opacity:.8;
+}
+
+.status{
+
+    margin-top:22px;
+
+    background:white;
+
+    border-radius:999px;
+
+    padding:16px;
+
+    font-size:22px;
+    font-weight:700;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+.check{
+    color:#18b84a;
+}
+
+.button{
+
+    margin-top:18px;
+
+    width:100%;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#111;
+
+    color:white;
+
+    padding:18px;
+
+    font-size:18px;
+    font-weight:600;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+
+    <div class="header">
+
+        <div class="title">
+            MINHA CARTEIRINHA DE ESTUDANTE
+        </div>
+
+            <div class="logos">
+
+    		<img class="logo-img left-logo"
+    		src="logo_dne.png">
+
+    		<img class="logo-img right-logo"
+    		src="logo_fesn.webp">
+	
+        </div>
+
+    </div>
+
+    <div class="top-section">
+
+        <div class="photo-box">
+
+            <img class="photo"
+            src="foto_marcelo.png">
+
+        </div>
+
+        <div class="qr-box">
+
+            <img class="qr-image"
+            src="qr_marcelo.png">
+	
+	    <div class="qr-text">
+    	    Nº DA CIE<br>
+    	    03P14IM21
+	    </div>
+
+        </div>
+
+    </div>
+
+    <div class="info-card">
+
+        <div class="name">
+            MARCELO PETRINI VALLERINI FILHO
+        </div>
+
+        <div class="info">
+            <strong>INST. DE ENSINO:</strong>
+            UNESP
+        </div>
+
+        <div class="info">
+            <strong>CURSO:</strong>
+            MATEMÁTICA
+        </div>
+
+        <div class="info">
+            <strong>TIPO DE CURSO:</strong>
+            BACHARELADO
+        </div>
+
+        <br>
+
+        <div class="info">
+            <strong>CPF:</strong>
+            452.783.458-45
+        </div>
+
+        <div class="info">
+            <strong>DATA DE NASC:</strong>
+            13/04/1999
+        </div>
+
+        <div class="info">
+            <strong>VALIDADE:</strong>
+            31/03/2027
+        </div>
+
+        <div class="year">
+            2026
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+        <div class="footer-title">
+            FEDERAÇÃO DOS ESTUDANTES NACIONAL
+        </div>
+
+        <div class="footer-sub">
+            Valide sua DNE em: validadordnefesn.org.br
+        </div>
+
+        <div class="status">
+
+            <span class="check">✓</span>
+
+            Certificado
+
+        </div>
+
+        <button class="button">
+            Buscar outra carteirinha
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>
