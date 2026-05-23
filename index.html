@@ -133,17 +133,27 @@ body{
 .photo-box{
     width:50%;
     height:235px;
-    overflow:hidden;
+
     border-radius:18px;
+    overflow:hidden;
+
+    position:relative;
+
+    flex-shrink:0;
 }
 
 .photo{
     width:100%;
-    aspect-ratio:3/4;
+    height:100%;
 
     object-fit:cover;
+    object-position:center;
 
     display:block;
+
+    border-radius:18px;
+
+    -webkit-mask-image:-webkit-radial-gradient(white, black);
 }
 
 .qr-box{
